@@ -86,14 +86,17 @@
             <h1>6. Content</h1>
             <p>
                 For all pages the menu bar wil be static, meaning it wil always be
-                on the top of the page. The current pages font should be highlighted 'e.g. bold text'
-                <img src='images/Menubar_layou.png' id='menu' alt='Layou of the menu bar'>
+                on the top of the page. The current pages font should be highlighted 'e.g. bold text', as shown in the pictures below
+                
                 The layou of the article pages will be smimular to each other, but the difference wil be the 
                 content of each page. <br>
                 The structure of each page wil feature a main article at the top of the page, this will in most cases
                 be the latest article. This article will the bigest article on the screen, to get the attension of the reader.<br>
                 If there is an article of big relevants to the tech world this article should be the top 'main' article instead
                 of the latest released. This happens if the editor of the page pins the article to the top for a period of time
+
+                The article pages will have a search bar, that will help the user find articles of specific topics. On the left side of the page
+                will thre be a 'arrow, button' which will reveal a sidebar menu, that contains favorite and log.
             </p>
             <h2 class="content">Article pages</h2>
             <p>
@@ -101,38 +104,49 @@
                 <ol id='content_list'>
                     <li>Homepage</li>
                     <li>Games</li>
-                    <li>Hardware</li>
                     <li>Software</li>
+                    <li>Hardware</li>
                 </ol>
-            <img src='images/Article_layou.png' id='article_layou' alt='Mockups for the article pages'>
-            
-            <p> 1. Homepage <br>
-                This is the main of the website, and wil be where the user
-                is taken to when they enter the URL &lt; techfind.xxx &gt;. <br>
-                The homepage wil show the latest article. With the help of javascript, the newest articles wil be on top, and will be bigger
-                than the articles below. Articles wil get smaller down the page, to fit more articles at the same page.
-                In contrast to the other feed-pages, the homepage will be standardized and show a variety of articles. This is 
-                for the user to get used to the layout before they enter a category-page and/or keywords to persinalize their feed.
-            </p>
+                
+                <p> 1. Homepage <br>
+                    This is the main of the website, and wil be where the user
+                    is taken to when they enter the URL &lt; techfind.xxx &gt;. <br>
+                    The homepage wil show the latest article. With the help of javascript, the newest articles wil be on top, and will be bigger
+                    than the articles below. Articles wil get smaller down the page, to fit more articles at the same page.
+                    In contrast to the other feed-pages, the homepage will be standardized and show a variety of articles. This is 
+                    for the user to get used to the layout before they enter a category-page and/or keywords to persinalize their feed.
+                </p>
+            <img src='images/Homepage.png' class='img_layout' alt='Mockups for the article pages'>
 
             <p>
                 2. Games<br>
                 This page is mainly for article about games but can share som content with software, if there is an article that could be
                 relevant for both categories like a new game engine (e.g. Unreal Engine 5).
             </p>
+            <img src='images/Game_page.png' class='img_layout' alt='Mockups for game page'>
+            <p>This image shows the sidebar menu, that will be hidden until the user hovers the mouse over the arrow (left side, center of screen)</p>
             <p>
-                3. Hardware<br>
+                3. Software <br>
+                This wil show articles that main contains software development, AI, programming etc.
+            </p>
+            <img src='images/Software_m_side_m.png' class='img_layout' alt='Mockups for software page'>
+            <p>This image show the sidebar menu extended, this wil take action when the user hovers the mouse over</p>
+            <p>
+                4. Hardware<br>
                 This page is for tech that can be categorized as hardware, everything from computer hardware, to new material that can be used in
                 space rockets, cars, cameras, etc.
             </p>
-            <p>
-                4. Software <br>
-                This wil show articles that main contains software development, AI, programming etc.
-            </p>
+            <img src='images/Hardware.png' class='img_layout' alt='Mockups for hardware page'>
+
 
             <p>
                 All articles pages wil have different content but articles with shared content wil be visible on more then
                 one page.
+            </p>
+
+            <p>
+                In addition, it wil be a search bar at the top of all the article pages. This is so the user can search after specific
+                keyword, and find articles realated to the search
             </p>
             
             <h3>favorites.html</h3>
@@ -150,6 +164,35 @@
 
         <div class="box">
             <h1>7. Minimum Requirements</h1>
+            <p>
+                Hover_menu.js <br>
+                A javascript function will be responsible for revele the sidebar menu at the left side
+                of the page. This menu will only be visible if the hovers or clicks the menu-'button, arrow'.
+            </p>
+
+            <p>
+                Search_bar.js <br>
+                This Javascript file will contain functions that gives the user the opportunity
+                to search for certain keywords. This means that the user can personalize their feed
+                even further by only viewing the articles that contain the searched word.
+                This will be useful to weed out articles that are irrelevant to the user, and to help the user 
+                find their preferred article faster.
+            </p>
+            <p>
+                Dark_mode.js <br>
+                Dark_mode function will be a responsible for changing the style of the page for a light environment
+                to a darker one. This will help reduce the amount of of brigh light, so the user can keep read for longer
+                without fatigueing. Ideally will this be able to track the system preferences of the users
+                device. So is they are using a phone config. in dark mode, the page wil automatically change to dark mode.
+                The user should also be albe to change the settings for this at will for the page only
+            </p>
+            <p>
+                Fetch-bot
+                This JavaScript-file will contain functionality for fetching articles from publicly
+                available online tech-magazines, newspapers etc and keep track of when they are fetched.
+                It takes a search word as parameter, uses it in a browser and fetches the relevant articles.
+                Keeping track of when they are fetched means that we can give the articles different styling accordingly.
+            </p>
         </div>
 
         <div class="box">
@@ -189,7 +232,6 @@
                 <ul>
                     <li>hover_menu.js</li>
                     <li>fetch_bot.js</li>
-                    <li>login_page.js</li>
                     <li>search_bar.js</li>
                     <li>dark_mode.js</li>
                 </ul>
@@ -277,12 +319,7 @@
                     <td>Erlend</td>
                     <td>31.10.21</td>
                 </tr>
-                <tr>
-                    <td>login_page.js</td>
-                    <td>Page that asks the user to login</td>
-                    <td>Tobias</td>
-                    <td>31.10.21</td>
-                </tr>
+
                 <tr>
                     <td>search_bar.js</td>
                     <td>Search Bar for the user</td>
